@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setExpense } from "../../redux/expenceSlice";
+import { addExpense } from "../../redux/expensesSlice";
 
 const AddNewExpense = () => {
     const [newExpense, setNewExpense] = useState({
@@ -20,7 +20,7 @@ const AddNewExpense = () => {
 
     const handleAddNewExpense = (e) => {
         e.preventDefault();
-        dispatch(setExpense(newExpense));
+        dispatch(addExpense(newExpense));
 
         setNewExpense({
             'expense-name' : '',

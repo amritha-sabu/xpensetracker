@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import BudgetSection from "./BudgetSection";
 import { useNavigate } from "react-router-dom";
+import AddNewExpense from "./addExpense";
+import Expenses from "./Expenses";
 
 const TransactionPage = () => {
     const budgetData = useSelector((state) => state.budget);
@@ -21,6 +23,10 @@ const TransactionPage = () => {
                     <hr />
                     <main>
                         <BudgetSection />
+                        <hr />
+                        <AddNewExpense />
+                        <hr />
+                        <Expenses />
                     </main>
                 </div>
             ) : (
