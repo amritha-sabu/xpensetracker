@@ -80,7 +80,7 @@ const LandingPage = () => {
                     <label>Entertainment</label>
                     <input id='entertainment' name='entertainment' type='number' value={data.categoricalBudget.entertainment} onChange={(e) => handleChange(e)} />
                 </div>
-                {!budgetData ? (
+                {!budgetData.monthlyBudget ? (
                     <button type='submit'>Submit</button>
                 ) : (
                     <div>

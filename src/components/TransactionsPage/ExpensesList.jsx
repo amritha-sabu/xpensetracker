@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteExpense } from "../../redux/expensesSlice";
 
 const ExpensesList = () => {
-    const expenses = useSelector((state) => state.expenseReducer);
-    const filter = useSelector((state) => state.expenseFilterReducer.filterStatus);
+    const expenses = useSelector((state) => state.expense);
+    const filter = useSelector((state) => state.filter.filterStatus);
     const dispatch = useDispatch();
 
     const getFilteredExpenses = () => {

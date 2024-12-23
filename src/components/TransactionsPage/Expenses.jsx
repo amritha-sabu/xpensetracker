@@ -6,8 +6,8 @@ const Expenses = () => {
     return (
         <div>
             <header>
-                {/* <ExpenseFilter />
-                <ExpensesList /> */}
+                <ExpenseFilter />
+                <ExpensesList />
             </header>
         </div>
     );
