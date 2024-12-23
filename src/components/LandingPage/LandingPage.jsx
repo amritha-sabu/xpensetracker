@@ -33,6 +33,10 @@ const LandingPage = () => {
         }
     };
 
+    const handleSatrtNewTracker = () => {};
+
+    const handleGoBack = () => {};
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -76,7 +80,15 @@ const LandingPage = () => {
                     <label>Entertainment</label>
                     <input id='entertainment' name='entertainment' type='number' value={data.categoricalBudget.entertainment} onChange={(e) => handleChange(e)} />
                 </div>
-                <button type='submit'>Submit</button>
+                {!budgetData ? (
+                    <button type='submit'>Submit</button>
+                ) : (
+                    <div>
+                        <button id='new-update' onClick={(e) => handleSubmit(e)} >Update Budget</button>
+                        <button id='clear' onClick={handleSatrtNewTracker} >Start New Tracker</button>
+                        <button onClick={handleGoBack}>Go Back</button>
+                    </div>
+                )}
             </form>
         </div>
     );
