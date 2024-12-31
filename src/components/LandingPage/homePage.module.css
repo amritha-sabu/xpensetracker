@@ -1,9 +1,18 @@
 .body {
     background-color: black;
     max-width: 350px;
-    height: 40vh;
+    height: 90vh;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
+}
+
+.heading{
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.paragraph{
+    color: white;
 }
