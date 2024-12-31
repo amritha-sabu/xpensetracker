@@ -1,6 +1,7 @@
 .body {
     background-color: black;
-    max-width: 400px;
+    max-width: 350px;
+    height: 40vh;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
