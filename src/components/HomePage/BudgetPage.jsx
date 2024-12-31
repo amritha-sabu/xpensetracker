@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import styles from './landing.module.css';
+import styles from './budgetPage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setBudget } from '../../redux/budgetSlice';
 import { useNavigate } from 'react-router-dom';
-import HomePage from './HomePage';
 
-const LandingPage = () => {
+const BudgetPage = () => {
     const budgetData = useSelector((state) => state.budget);
     const [data, setData] = useState({
         userName: budgetData.userName || '',
@@ -64,7 +63,6 @@ const LandingPage = () => {
     return (
         <div className={styles.landingpage}>
             <h1>xTracker</h1>
-            <HomePage />
             <h3>Welcome to your won Expense Tracker</h3>
             <p>Please fill in the form below to start tracking</p>
             
@@ -96,4 +94,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default BudgetPage;

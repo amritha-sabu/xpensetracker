@@ -12,7 +12,7 @@ const HomePage = () => {
         <div className={styles.body}>
             <h1 className={styles.heading}>Take Control of Your Finances</h1>
             <p className={styles.paragraph}>With out app you can easily track your income and expenses, set financila goals, and make informed decisions about your money.</p>
-            <button onClick={handleNavigation()}>Get Started</button>
+            <button onClick={() => handleNavigation()}>Get Started</button>
         </div>
     );
 };
