@@ -1,4 +1,3 @@
-import React from "react";
 import ExpenseFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
 
