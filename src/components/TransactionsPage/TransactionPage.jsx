@@ -3,6 +3,7 @@ import BudgetSection from "./BudgetSection";
 import { useNavigate } from "react-router-dom";
 import AddNewExpense from "./addExpense";
 import Expenses from "./Expenses";
+import styles from './transaction.module.css';
 
 const TransactionPage = () => {
     const budgetData = useSelector((state) => state.budget);
@@ -12,12 +13,12 @@ const TransactionPage = () => {
         navigate('/');
     };
     return (
-        <div>
+        <div className={styles.transaction} >
             <h1>xTracker</h1>
             {budgetData ? (
                 <div>
                     <header>
-                        <h2>{budgetData.userName}s Monthly Expenditure</h2>
+                        <h2 className={styles.header} >{budgetData.userName}s Monthly Expenditure</h2>
                         <button id='new-update' onClick={handleNewOrUpdateClick}>New/Update tracker</button>
                     </header>
                     <hr />

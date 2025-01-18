@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import style from './budgetSection.module.css';
 
 const BudgetSection = () => {
     const budgetData = useSelector((state) => state.budget);
@@ -19,15 +20,15 @@ const BudgetSection = () => {
         const categoryLimitStatus = categoryBalance < 0 ? 'exceed' : 'within';
 
         return (
-            <tr key={category}>
-                <td>{category}</td>
-                <td style={{ backgroundColor: categoryBalance >= 0 ? "green" : "red", color : 'white' , width : '50px', borderRadius : '20px' }}>
-                    {categoryLimitStatus}
-                </td>
-                <td>{categoryBudget}</td>
-                <td>{totalCategoryExpense}</td>
-                <td>{categoryBalance}</td>
-            </tr>
+                <tr key={category}>
+                    <td>{category}</td>
+                    <td style={{ backgroundColor: categoryBalance >= 0 ? "green" : "red", color : 'white' , width : '50px', borderRadius : '20px' }}>
+                        {categoryLimitStatus}
+                    </td>
+                    <td>{categoryBudget}</td>
+                    <td>{totalCategoryExpense}</td>
+                    <td>{categoryBalance}</td>
+                </tr>
         );
     });
 
@@ -37,7 +38,7 @@ const BudgetSection = () => {
     const totalLimitStatus = totalBalance < 0 ? 'exceed' : 'within';
 
     return (
-        <div>
+        <div className={style.budgetRow}>
             {budgetData ? (
                         <main>
                             <table style={{ width: '100%', textAlign: 'center' }}>

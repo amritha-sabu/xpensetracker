@@ -17,7 +17,7 @@
     border-radius: 25px;
 }
 
-.landingpage h1, p{
+.landingpage h1, h3, p{
     color: #ccc;
 }
 
@@ -28,8 +28,9 @@ label{
 }
 
 input {
-    width: 100%;
+    width: 75%;
     padding: 8px;
     margin: 5px 0;
     box-sizing: border-box;
+    border-radius: 10px;
 }

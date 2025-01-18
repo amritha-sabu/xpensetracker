@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addExpense } from "../../redux/expensesSlice";
+import styles from './newExpense.module.css';
 
 const AddNewExpense = () => {
     const [newExpense, setNewExpense] = useState({
@@ -30,10 +31,10 @@ const AddNewExpense = () => {
     };
 
     return (
-        <div>
+        <div className={styles.expenseForm}>
             <div id="title">New Expense Form</div>
 
-            <form id="expense-form1" onSubmit={(e) => handleAddNewExpense(e)} >
+            <form className={styles.expenseForm1} id="expense-form1" onSubmit={(e) => handleAddNewExpense(e)} >
                 <label htmlFor="expense-name">Expense Name</label>
                 <input type='text' name="expense-name" value={newExpense['expense-name']} onChange={(e) => handleChange(e)} />
                 <label htmlFor="category-select">Select a Category</label>

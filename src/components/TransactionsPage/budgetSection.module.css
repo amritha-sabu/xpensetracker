@@ -1,0 +1,5 @@
+.budgetRow{
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+}
