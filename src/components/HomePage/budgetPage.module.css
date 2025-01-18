@@ -1,14 +1,30 @@
-.landingpage{
-    max-width: 400px;
+/* body{
+    background-color: black;
+    max-width: 350px;
+    height: 90vh;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px;
+} */
+.landingpage{
+    background-color: black;
+    max-width: 350px;
+    height: 90vh;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.landingpage h1, p{
+    color: #ccc;
 }
 
 label{
     display: block;
     margin-top: 10px;
+    color: #ccc;
 }
 
 input {
