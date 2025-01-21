@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteExpense } from "../../redux/expensesSlice";
+import styles from './expensesList.module.css';
 
 const ExpensesList = () => {
     const expenses = useSelector((state) => state.expense);
@@ -19,7 +20,7 @@ const ExpensesList = () => {
     };
 
     return (
-        <div>
+        <div className={styles.expenses}>
             <h3>Filtered by: {filter}</h3>
             <table style={{ width: '100%', textAlign: 'center', border: '1px solid black' }}>
                 <thead>
@@ -31,7 +32,7 @@ const ExpensesList = () => {
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className={styles.expenseList}>
                     {filteredExpenses && filteredExpenses.length > 0 ? (
                         filteredExpenses.map((expense, index) => (
                             <tr key={index}>
