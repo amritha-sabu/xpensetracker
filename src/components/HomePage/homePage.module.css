@@ -16,3 +16,10 @@
 .paragraph{
     color: white;
 }
+
+button{
+    width: 150px;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+}
